@@ -1,0 +1,42 @@
+{
+  "name": "noir-allure",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Becky Gia",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@base-ui-components/react": "^1.0.0-alpha.5",
+    "@mui/material": "^6.4.5",
+    "@mui/system": "^6.4.3",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "core-js": "^3.40.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "react-number-format": "^5.4.3",
+    "react-spring": "^9.7.5",
+    "react-timer-hook": "^3.0.8",
+    "stripe": "^17.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
